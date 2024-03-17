@@ -6,20 +6,20 @@ on:
       - master
 
 jobs:
-  compress-images:
+  compress_images:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      - name: Install squoosh-cli
-        run: npm install -g squoosh-cli
+      - name: Install dependencies
+        run: npm install -g @squoosh/cli
 
       - name: Compress images
         run: |
