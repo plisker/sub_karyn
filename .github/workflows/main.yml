@@ -6,37 +6,25 @@ on:
       - master
 
 jobs:
-  compress_images:
+  compress-images:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install -g @squoosh/cli
+      - name: Install squoosh-cli
+        run: npm install -g squoosh-cli
 
-      - name: Compress and convert images
+      - name: Compress images
         run: |
-          for file in $(find . -type f -name "*.jpg"); do
-            compressed_file="${file%.*}-compressed.jpg"
-            if [ ! -f "$compressed_file" ]; then
-              squoosh-cli --mozjpeg '{"quality": 75}' "$file" -d . -s "-compressed.jpg"
-            fi
-
-            webp_file="${file%.*}-compressed.webp"
-            if [ ! -f "$webp_file" ]; then
-              squoosh-cli --webp '{"quality": 75}' "$compressed_file" -d . -s "-compressed.webp"
+          for file in $(find . -name "*.jpg"); do
+            if [[ ! $file == *"-compressed.jpg" && ! $file == *"-compressed.webp" ]]; then
+              squoosh-cli --max-optimizer-rounds 6 --mozjpeg --webp -d $(dirname $file) -s "-compressed" $file
             fi
           done
-
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff-index --quiet HEAD || git commit -m "Compress and convert images" && git push
