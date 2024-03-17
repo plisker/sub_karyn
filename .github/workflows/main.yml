@@ -25,12 +25,12 @@ jobs:
           for file in $(find . -type f -name "*.jpg"); do
             compressed_file="${file%.*}-compressed.jpg"
             if [ ! -f "$compressed_file" ]; then
-              squoosh-cli --mozjpeg '{"quality": 75}' "$file" --output "$compressed_file"
+              squoosh-cli --mozjpeg '{"quality": 75}' "$file" -d . -s "-compressed.jpg"
             fi
 
             webp_file="${file%.*}-compressed.webp"
             if [ ! -f "$webp_file" ]; then
-              squoosh-cli --webp '{"quality": 75}' "$compressed_file" --output "$webp_file"
+              squoosh-cli --webp '{"quality": 75}' "$compressed_file" -d . -s "-compressed.webp"
             fi
           done
 
