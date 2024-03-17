@@ -3,7 +3,7 @@ name: Image Compression
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   compress_images:
