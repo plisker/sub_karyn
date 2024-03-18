@@ -23,9 +23,10 @@ jobs:
 
       - name: Compress images
         run: |
-          for file in $(find . -name "*.jpg"); do
-            if [[ ! $file == *"-compressed.jpg" && ! $file == *"-compressed.webp" ]]; then
-              squoosh-cli --max-optimizer-rounds 6 --mozjpeg --webp -d $(dirname $file) -s "-compressed" $file
-              echo "Compressed $file"
-            fi
-          done
+          find . -path "*/images/*.jpg" \
+            -not -name "*-compressed.jpg" \
+            -not -name "*-compressed.webp" \
+            -exec bash -c ' \
+              squoosh-cli --max-optimizer-rounds 6 --mozjpeg --webp \
+                -d "$(dirname "{}")" -s "-compressed" "{}" && \
+              echo "Compressed {}"' \;
