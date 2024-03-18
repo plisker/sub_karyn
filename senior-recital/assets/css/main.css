@@ -9042,7 +9042,7 @@ input, select, textarea {
 		height: 50px;
 		width: 50px;
 		font-size: 50px; /* Increase font size */
-		color: white; /* Text color */
+		color: #000; /* Text color */
 		cursor: pointer; /* Add a mouse pointer on hover */
 		opacity: 0.2;
 		transition: 0.3s;
