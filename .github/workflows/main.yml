@@ -19,7 +19,7 @@ jobs:
           node-version: '14'
 
       - name: Install squoosh-cli
-        run: npm install -g squoosh/cli
+        run: npm install -g @squoosh/cli
 
       - name: Compress images
         run: |
