@@ -6,25 +6,26 @@ on:
       - master
 
 jobs:
-  compress_images:
+  compress-images:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install -g @squoosh/cli
+      - name: Install squoosh-cli
+        run: npm install -g squoosh/cli
 
       - name: Compress images
         run: |
           for file in $(find . -name "*.jpg"); do
             if [[ ! $file == *"-compressed.jpg" && ! $file == *"-compressed.webp" ]]; then
               squoosh-cli --max-optimizer-rounds 6 --mozjpeg --webp -d $(dirname $file) -s "-compressed" $file
+              echo "Compressed $file"
             fi
           done
