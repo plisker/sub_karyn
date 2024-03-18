@@ -24,6 +24,10 @@ jobs:
       - name: Compress images
         run: |
           for file in $(find . -type f -name "*.jpg"); do
+            if [[ "$file" =~ -compressed\..*$ ]]; then
+              continue
+            fi
+
             compressed_file="${file%.*}-compressed.jpg"
             if [ ! -f "$compressed_file" ]; then
               squoosh-cli --mozjpeg '{"quality": 80}' "$file" -d "$(dirname "$file")" -s "-compressed"
