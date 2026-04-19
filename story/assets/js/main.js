@@ -60,7 +60,9 @@
 			var $nav_a = $nav.find('a');
 
 			$nav_a
+				.filter(function() { return $(this).attr('href').charAt(0) === '#'; })
 				.addClass('scrolly')
+				.end()
 				.on('click', function() {
 
 					var $this = $(this);
@@ -81,8 +83,13 @@
 				.each(function() {
 
 					var	$this = $(this),
-						id = $this.attr('href'),
-						$section = $(id);
+						id = $this.attr('href');
+
+					// External link? Bail.
+						if (!id || id.charAt(0) !== '#')
+							return;
+
+					var	$section = $(id);
 
 					// No section for this link? Bail.
 						if ($section.length < 1)
