@@ -91,9 +91,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <!-- Footer -->
         <footer id="footer">
             <ul class="copyright">
-                <li>&copy; Karyn Lisker</li>
-                <li>Design: <a href="https://html5up.net" rel="noopener" target=_blank>HTML5 UP</a></li>
-                <li>Webmaster: <a href="https://lisker.me" rel="noopener" target=_blank>Paul Lisker</a></li>
+                <li>&copy; <span data-auto-year>2026</span> Karyn Lisker</li>
+                <li>Design: <a href="https://html5up.net" rel="noopener" target="_blank">HTML5 UP</a></li>
+                <li>Webmaster: <a href="https://lisker.me" rel="noopener" target="_blank">Paul Lisker</a></li>
             </ul>
         </footer>
     </div>
@@ -105,6 +105,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         var iconLinks = document.querySelectorAll('.icons a[aria-label]');
         var observer = new MutationObserver(function () { iconLinks.forEach(function (el) { if (el.getAttribute('aria-hidden')) el.removeAttribute('aria-hidden'); }); });
         iconLinks.forEach(function (el) { observer.observe(el, { attributes: true, attributeFilter: ['aria-hidden'] }); });
+        document.querySelectorAll('[data-auto-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
     </script>
 </body>
 

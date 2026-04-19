@@ -134,7 +134,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     <li><a href="mailto:karyn@lisker.me"
                             class="icon style2 fa-regular fa-envelope" aria-label="Email"><span class="label">Email</span></a></li>
                 </ul>
-                <p>&copy;2024, Karyn Lisker. | Design: <a href="https://html5up.net" target="_blank"
+                <p>&copy; <span data-auto-year>2026</span> Karyn Lisker. | Design: <a href="https://html5up.net" target="_blank"
                         rel="noopener">HTML5
                         UP</a> | Webmaster: <a href="https://lisker.me" target="_blank" rel="noopener">Paul Lisker</a>
                 </p>
@@ -151,6 +151,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>document.querySelectorAll('[data-auto-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 </body>
 
 </html>

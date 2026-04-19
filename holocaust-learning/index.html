@@ -177,7 +177,7 @@
         <section id="footer">
             <div class="container">
                 <ul class="copyright">
-                    <li>&copy; Karyn Lisker. All rights reserved.</li>
+                    <li>&copy; <span data-auto-year>2026</span> Karyn Lisker. All rights reserved.</li>
                     <li>Design: <a href="https://html5up.net" rel="noopener" target="_blank">HTML5 UP</a></li>
                     <li>Webmaster: <a href="https://lisker.me" rel="noopener" target="_blank">Paul Lisker</a></li>
                 </ul>
@@ -193,6 +193,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>document.querySelectorAll('[data-auto-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 </body>
 
 </html>
