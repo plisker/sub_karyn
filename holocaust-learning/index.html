@@ -4,9 +4,11 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JERQFZR6JP"></script>
     <script>
@@ -21,11 +23,9 @@
         content="Resources&mdash;books, memoirs, and films&mdash;to learn more about the Holocaust. Published as a companion piece to Karyn Lisker&rsquo;s Senior Honors Recital &ldquo;Echoes of Courage&rdquo;, performed at Emory University on March 22, 2024.">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta charset="utf-8" />
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
@@ -36,16 +36,20 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:site_name" content="Karyn Lisker &CenterDot; Senior Recital">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Karyn Lisker">
+    <meta property="og:title" content="Further Learning about the Holocaust">
     <meta property="og:description"
         content="Resources&mdash;books, memoirs, and films&mdash;to learn more about the Holocaust. Published as a companion piece to Karyn Lisker&rsquo;s Senior Honors Recital &ldquo;Echoes of Courage&rdquo;, performed at Emory University on March 22, 2024.">
+    <meta property="og:url" content="https://karyn.lisker.me/holocaust-learning/">
+    <meta property="og:image" content="https://karyn.lisker.me/holocaust-learning/images/juif-compressed.jpg">
     <link rel="canonical" href="https://karyn.lisker.me/holocaust-learning/" />
     <script type="application/ld+json">
         {
           "@context" : "https://schema.org",
-          "@type" : "WebSite",
-          "name" : "Karyn Lisker",
-          "url" : "https://karyn.lisker.me/"
+          "@type" : "WebPage",
+          "name" : "Further Learning about the Holocaust",
+          "url" : "https://karyn.lisker.me/holocaust-learning/"
         }
       </script>
 
@@ -57,9 +61,9 @@
         <header>
             <span class="image avatar">
                 <picture>
-                    <source type="image/webp" srcset="images/juif-compressed.webp" alt="Yellow Jewish star">
-                    <source type="image/jpeg" srcset="images/juif-compressed.jpg" alt="Yellow Jewish star">
-                    <img src="images/juif-compressed.jpg" alt="Yellow Jewish star">
+                    <source type="image/webp" srcset="images/juif-compressed.webp">
+                    <source type="image/jpeg" srcset="images/juif-compressed.jpg">
+                    <img src="images/juif-compressed.jpg" alt="Yellow Jewish star" width="600" height="652">
                 </picture>
             </span>
             <h1 id="logo"><a href="#">Resources for Further Learning</a></h1>
@@ -76,12 +80,12 @@
         <footer>
             <ul class="icons">
                 <li><a href="https://www.linkedin.com/in/karynlisker/" target="_blank" rel="noopener"
-                        class="icon brands style2 fa-brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        class="icon brands style2 fa-brands fa-linkedin" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
                 <li><a href="https://www.youtube.com/channel/UC5BwGJ5Je4LB2BeBQorlSOQ/" target="_blank" rel="noopener"
-                        class="icon brands style2 fa-brands fa-youtube"><span class="label">LinkedIn</span></a>
+                        class="icon brands style2 fa-brands fa-youtube" aria-label="YouTube"><span class="label">YouTube</span></a>
                 </li>
-                <li><a href="mailto:karyn@lisker.me" target="_blank" rel="noopener"
-                        class="icon style2 fa-regular fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="mailto:karyn@lisker.me"
+                        class="icon style2 fa-regular fa-envelope" aria-label="Email"><span class="label">Email</span></a></li>
             </ul>
         </footer>
     </section>
@@ -89,7 +93,7 @@
     <!-- Wrapper -->
     <div id="wrapper">
         <!-- Main -->
-        <div id="main">
+        <main id="main">
             <!-- Books -->
             <section id="books">
                 <!-- <div class="image main" data-position="center">
@@ -141,7 +145,7 @@
             <section id="films">
                 <div class="container">
                     <header class="major">
-                        <h3>Films</p>
+                        <h3>Films</h3>
                     </header>
                     <ul class="feature-icons">
                         <li class="icon solid fa-film"><a href="https://www.imdb.com/title/tt0048434/"
@@ -167,15 +171,15 @@
                 </div>
             </section>
 
-        </div>
+        </main>
 
         <!-- Footer -->
         <section id="footer">
             <div class="container">
                 <ul class="copyright">
-                    <li>&copy; Karyn Lisker. All rights reserved.</li>
-                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    <li>Webmaster: <a href="http://lisker.me">Paul Lisker</a></li>
+                    <li>&copy; <span data-auto-year>2026</span> Karyn Lisker. All rights reserved.</li>
+                    <li>Design: <a href="https://html5up.net" rel="noopener" target="_blank">HTML5 UP</a></li>
+                    <li>Webmaster: <a href="https://lisker.me" rel="noopener" target="_blank">Paul Lisker</a></li>
                 </ul>
             </div>
         </section>
@@ -189,6 +193,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>document.querySelectorAll('[data-auto-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 </body>
 
 </html>

@@ -4,9 +4,11 @@ Story by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JERQFZR6JP"></script>
     <script>
@@ -16,11 +18,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
         gtag('config', 'G-JERQFZR6JP');
     </script>
-    <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Karyn Lisker | Senior Honors Recital</title>
     <meta name="description"
         content="Companion website to Karyn Lisker's Senior Honors Recital &ldquo;Echoes of Courage&rdquo;, performed at Emory University on March 22, 2024.">
@@ -40,16 +40,20 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:site_name" content="Karyn Lisker &CenterDot; Senior Recital">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Karyn Lisker">
+    <meta property="og:title" content="Karyn Lisker | Senior Honors Recital">
     <meta property="og:description"
         content="Companion website to Karyn Lisker's Senior Honors Recital &ldquo;Echoes of Courage&rdquo;, performed at Emory University on March 22, 2024.">
+    <meta property="og:url" content="https://karyn.lisker.me/senior-recital/">
+    <meta property="og:image" content="https://karyn.lisker.me/senior-recital/images/senior-recital-compressed.jpg">
     <link rel="canonical" href="https://karyn.lisker.me/senior-recital/" />
     <script type="application/ld+json">
         {
           "@context" : "https://schema.org",
-          "@type" : "WebSite",
-          "name" : "Karyn Lisker",
-          "url" : "https://karyn.lisker.me/"
+          "@type" : "WebPage",
+          "name" : "Karyn Lisker | Senior Honors Recital",
+          "url" : "https://karyn.lisker.me/senior-recital/"
         }
       </script>
 
@@ -57,7 +61,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 <body class="is-preload">
     <!-- Wrapper -->
-    <div id="wrapper" class="divided">
+    <div id="wrapper" class="divided" role="main">
         <!-- About -->
         <section
             class="banner style1 fake-banner orient-right content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right color0">
@@ -73,54 +77,48 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             </div>
             <div class="image">
                 <picture>
-                    <source type="image/webp" srcset="images/senior-recital-compressed.webp"
-                        alt="Karyn Lisker - Senior Recital">
-                    <source type="image/jpeg" srcset="images/senior-recital-compressed.jpg"
-                        alt="Karyn Lisker - Senior Recital">
-                    <img src="images/senior-recital-compressed.jpg" alt="Karyn Lisker - Senior Recital">
+                    <source type="image/webp" srcset="images/senior-recital-compressed.webp">
+                    <source type="image/jpeg" srcset="images/senior-recital-compressed.jpg">
+                    <img src="images/senior-recital-compressed.jpg" alt="Karyn Lisker - Senior Recital" width="1280" height="1105">
                 </picture>
             </div>
         </section>
         <!-- Grandfather's Story -->
         <section
             class="spotlight style2 invert color0 orient-left content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
+            id="grandfather">
             <div class="content">
                 <h1>My Grandfather's Story</h1>
                 <p>Read about how Paul Figot, my grandfather, escaped from Europe with his family,<br>as shared by his
                     sister Bella Janes.</p>
                 <ul class="actions stacked">
-                    <li><a href="/story" rel="noopener" class="button">Read More</a></li>
+                    <li><a href="/story" rel="noopener" class="button" aria-label="Read more about my grandfather's story">Read More</a></li>
                 </ul>
             </div>
             <div class="image">
                 <picture>
-                    <source type="image/webp" data-srcset="images/paul-figot-compressed.webp" class="lazyload"
-                        alt="Paul Figot">
-                    <source type="image/jpeg" data-srcset="images/paul-figot-compressed.jpg" class="lazyload"
-                        alt="Paul Figot">
-                    <img data-src="images/paul-figot-compressed.jpg" class="lazyload" alt="Paul Figot">
+                    <source type="image/webp" data-srcset="images/paul-figot-compressed.webp" class="lazyload">
+                    <source type="image/jpeg" data-srcset="images/paul-figot-compressed.jpg" class="lazyload">
+                    <img data-src="images/paul-figot-compressed.jpg" class="lazyload" alt="Paul Figot" width="600" height="600">
                 </picture>
             </div>
         </section>
         <!-- Further Learning -->
         <section
             class="spotlight style2 invert color0 orient-right content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
+            id="further-learning">
             <div class="content">
                 <h1>Further Learning</h1>
                 <p>Resources&mdash;books, memoirs, and films&mdash;to learn more about the Holocaust.</p>
                 <ul class="actions stacked">
-                    <li><a href="/holocaust-learning" rel="noopener" class="button">Read More</a></li>
+                    <li><a href="/holocaust-learning" rel="noopener" class="button" aria-label="Read more about Holocaust learning resources">Read More</a></li>
                 </ul>
             </div>
             <div class="image">
                 <picture>
-                    <source type="image/webp" data-srcset="images/juif-compressed.webp" class="lazyload"
-                        alt="Yellow Jewish star">
-                    <source type="image/jpeg" data-srcset="images/juif-compressed.jpg" class="lazyload"
-                        alt="Yellow Jewish star">
-                    <img data-src="images/juif-compressed.jpg" class="lazyload" alt="Yellow Jewish star">
+                    <source type="image/webp" data-srcset="images/juif-compressed.webp" class="lazyload">
+                    <source type="image/jpeg" data-srcset="images/juif-compressed.jpg" class="lazyload">
+                    <img data-src="images/juif-compressed.jpg" class="lazyload" alt="Yellow Jewish star" width="600" height="652">
                 </picture>
             </div>
         </section>
@@ -129,14 +127,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <div class="inner">
                 <ul class="icons">
                     <li><a href="https://www.linkedin.com/in/karynlisker/" target="_blank" rel="noopener"
-                            class="icon brands style2 fa-brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            class="icon brands style2 fa-brands fa-linkedin" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
                     <li><a href="https://www.youtube.com/channel/UC5BwGJ5Je4LB2BeBQorlSOQ/" target="_blank"
-                            rel="noopener" class="icon brands style2 fa-brands fa-youtube"><span class="label">LinkedIn</span></a>
+                            rel="noopener" class="icon brands style2 fa-brands fa-youtube" aria-label="YouTube"><span class="label">YouTube</span></a>
                     </li>
-                    <li><a href="mailto:karyn@lisker.me" target="_blank" rel="noopener"
-                            class="icon style2 fa-regular fa-envelope"><span class="label">Email</span></a></li>
+                    <li><a href="mailto:karyn@lisker.me"
+                            class="icon style2 fa-regular fa-envelope" aria-label="Email"><span class="label">Email</span></a></li>
                 </ul>
-                <p>&copy;2024, Karyn Lisker. | Design: <a href="https://html5up.net" target="_blank"
+                <p>&copy; <span data-auto-year>2026</span> Karyn Lisker. | Design: <a href="https://html5up.net" target="_blank"
                         rel="noopener">HTML5
                         UP</a> | Webmaster: <a href="https://lisker.me" target="_blank" rel="noopener">Paul Lisker</a>
                 </p>
@@ -144,7 +142,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         </footer>
     </div>
     <!-- Home button -->
-    <a href="/"><button id="home-button" title="Home Page" class="far fa-arrow-alt-circle-left"></button></a>
+    <a href="/" id="home-button" title="Home Page" aria-label="Home" class="far fa-arrow-alt-circle-left"></a>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -153,6 +151,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>document.querySelectorAll('[data-auto-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 </body>
 
 </html>

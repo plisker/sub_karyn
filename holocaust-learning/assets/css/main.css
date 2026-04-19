@@ -2196,6 +2196,7 @@ input, select, textarea {
 				border-radius: 100%;
 				display: block;
 				width: 100%;
+				height: auto;
 			}
 
 		.image.main {
@@ -2841,7 +2842,7 @@ input, select, textarea {
 	#footer {
 		background: #fafafa;
 		border-top: 0;
-		color: #c0c0c0;
+		color: #6d6d6d;
 		overflow: hidden;
 		padding: 4em 0 2em 0;
 	}

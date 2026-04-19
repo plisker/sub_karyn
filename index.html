@@ -4,9 +4,11 @@ Identity by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JERQFZR6JP"></script>
     <script>
@@ -21,15 +23,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         content="Karyn Lisker is a Psychology and Music (Vocal Performance) double-major at Emory University in Atlanta, GA.">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <html lang="en" xml:lang="en" xmlns="https://www.w3.org/1999/xhtml">
-    <meta http-equiv="Content-Language" content="en">
     <script src="https://kit.fontawesome.com/414f558033.js" crossorigin="anonymous"></script>
-    <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
@@ -42,16 +37,39 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <meta name="application-name" content="Karyn Lisker">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Karyn Lisker">
+    <meta property="og:title" content="Karyn Lisker | Psychology and Music Student">
     <meta property="og:description"
         content="Karyn Lisker is a Psychology and Music (Vocal Performance) double-major at Emory University in Atlanta, GA.">
+    <meta property="og:url" content="https://karyn.lisker.me/">
+    <meta property="og:image" content="https://karyn.lisker.me/images/avatar-compressed.jpg">
     <link rel="canonical" href="https://karyn.lisker.me/" />
     <script type="application/ld+json">
         {
-          "@context" : "https://schema.org",
-          "@type" : "WebSite",
-          "name" : "Karyn Lisker",
-          "url" : "https://karyn.lisker.me/"
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Karyn Lisker",
+          "alternateName": "Karyn Lisker | Psychology and Music Student",
+          "url": "https://karyn.lisker.me/"
+        }
+      </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Karyn Lisker",
+          "url": "https://karyn.lisker.me/",
+          "jobTitle": "Psychology and Music Student",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Emory University"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/karynlisker/",
+            "https://www.youtube.com/channel/UC5BwGJ5Je4LB2BeBQorlSOQ/"
+          ]
         }
       </script>
 
@@ -61,13 +79,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <!-- Wrapper -->
     <div id="wrapper">
         <!-- Main -->
-        <section id="main">
+        <main id="main">
             <header>
                 <span class="avatar">
                     <picture>
                         <source srcset="images/avatar-compressed.webp" type="image/webp">
                         <source srcset="images/avatar-compressed.jpg" type="image/jpeg">
-                        <img src="images/avatar-compressed.jpg">
+                        <img src="images/avatar-compressed.jpg" alt="Karyn Lisker" width="200" height="200">
                     </picture>
                 </span>
                 <h1>Karyn Lisker</h1>
@@ -81,30 +99,32 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <footer>
                 <ul class="icons">
                     <li class="flex-item"><a href="https://www.linkedin.com/in/karynlisker/" rel="noopener"
-                            class="fa-brands fa-linkedin" target=_blank>LinkedIn</a></li>
+                            class="fa-brands fa-linkedin" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
                     <li class="flex-item"><a href="https://www.youtube.com/channel/UC5BwGJ5Je4LB2BeBQorlSOQ/"
-                            rel="noopener" class="fa-brands fa-youtube" target=_blank>YouTube</a></li>
-                    <li class="flex-item"><a href="mailto:karyn@lisker.me" class="fa-regular fa-envelope" target=_blank>Email</a>
+                            rel="noopener" class="fa-brands fa-youtube" target="_blank" aria-label="YouTube">YouTube</a></li>
+                    <li class="flex-item"><a href="mailto:karyn@lisker.me" class="fa-regular fa-envelope" aria-label="Email">Email</a>
                     </li>
                 </ul>
             </footer>
-        </section>
+        </main>
         <!-- Footer -->
         <footer id="footer">
             <ul class="copyright">
-                <li>&copy; Karyn Lisker</li>
-                <li>Design: <a href="https://html5up.net" rel="noopener" target=_blank>HTML5 UP</a></li>
-                <li>Webmaster: <a href="https://lisker.me" rel="noopener" target=_blank>Paul Lisker</a></li>
+                <li>&copy; <span data-auto-year>2026</span> Karyn Lisker</li>
+                <li>Design: <a href="https://html5up.net" rel="noopener" target="_blank">HTML5 UP</a></li>
+                <li>Webmaster: <a href="https://lisker.me" rel="noopener" target="_blank">Paul Lisker</a></li>
             </ul>
         </footer>
     </div>
     <!-- Scripts -->
-    <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
     <script>
-        if ('addEventListener' in window) {
-            window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-        }
+        window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+        // FontAwesome kit auto-adds aria-hidden to elements carrying fa-* classes.
+        // Our icon links carry their accessible name in aria-label, so strip aria-hidden whenever FA re-adds it.
+        var iconLinks = document.querySelectorAll('.icons a[aria-label]');
+        var observer = new MutationObserver(function () { iconLinks.forEach(function (el) { if (el.getAttribute('aria-hidden')) el.removeAttribute('aria-hidden'); }); });
+        iconLinks.forEach(function (el) { observer.observe(el, { attributes: true, attributeFilter: ['aria-hidden'] }); });
+        document.querySelectorAll('[data-auto-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
     </script>
 </body>
 

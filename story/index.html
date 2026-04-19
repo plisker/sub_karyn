@@ -4,9 +4,11 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JERQFZR6JP"></script>
     <script>
@@ -21,11 +23,9 @@
         content="Read story of how Paul Figot and his family escaped Europe in 1941, as told by his sister Bella Janes. Published as a companion piece to Karyn Lisker&rsquo;s Senior Honors Recital &ldquo;Echoes of Courage&rdquo;, performed at Emory University on March 22, 2024.">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta charset="utf-8" />
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
@@ -36,16 +36,20 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:site_name" content="Karyn Lisker &CenterDot; Senior Recital">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Karyn Lisker">
+    <meta property="og:title" content="A Voyage of Refugees">
     <meta property="og:description"
         content="Read story of how Paul Figot and his family escaped Europe in 1941, as told by his sister Bella Janes. Published as a companion piece to Karyn Lisker&rsquo;s Senior Honors Recital &ldquo;Echoes of Courage&rdquo;, performed at Emory University on March 22, 2024.">
+    <meta property="og:url" content="https://karyn.lisker.me/story/">
+    <meta property="og:image" content="https://karyn.lisker.me/story/images/avatar-compressed.jpg">
     <link rel="canonical" href="https://karyn.lisker.me/story/" />
     <script type="application/ld+json">
         {
           "@context" : "https://schema.org",
-          "@type" : "WebSite",
-          "name" : "Karyn Lisker",
-          "url" : "https://karyn.lisker.me/"
+          "@type" : "Article",
+          "name" : "A Voyage of Refugees",
+          "url" : "https://karyn.lisker.me/story/"
         }
       </script>
 
@@ -57,9 +61,9 @@
         <header>
             <span class="image avatar">
                 <picture>
-                    <source type="image/webp" srcset="images/avatar-compressed.webp" alt="Paul Figot">
-                    <source type="image/jpeg" srcset="images/avatar-compressed.jpg" alt="Paul Figot">
-                    <img src="images/avatar-compressed.jpg" alt="Paul Figot">
+                    <source type="image/webp" srcset="images/avatar-compressed.webp">
+                    <source type="image/jpeg" srcset="images/avatar-compressed.jpg">
+                    <img src="images/avatar-compressed.jpg" alt="Paul Figot" width="300" height="300">
                 </picture>
             </span>
             <h1 id="logo"><a href="#">My Grandfather&rsquo;s Story</a></h1>
@@ -79,12 +83,12 @@
         <footer>
             <ul class="icons">
                 <li><a href="https://www.linkedin.com/in/karynlisker/" target="_blank" rel="noopener"
-                        class="icon brands style2 fa-brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        class="icon brands style2 fa-brands fa-linkedin" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
                 <li><a href="https://www.youtube.com/channel/UC5BwGJ5Je4LB2BeBQorlSOQ/" target="_blank" rel="noopener"
-                        class="icon brands style2 fa-brands fa-youtube"><span class="label">LinkedIn</span></a>
+                        class="icon brands style2 fa-brands fa-youtube" aria-label="YouTube"><span class="label">YouTube</span></a>
                 </li>
-                <li><a href="mailto:karyn@lisker.me" target="_blank" rel="noopener"
-                        class="icon style2 fa-regular fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="mailto:karyn@lisker.me"
+                        class="icon style2 fa-regular fa-envelope" aria-label="Email"><span class="label">Email</span></a></li>
             </ul>
         </footer>
     </section>
@@ -92,7 +96,7 @@
     <!-- Wrapper -->
     <div id="wrapper">
         <!-- Main -->
-        <div id="main">
+        <main id="main">
             <!-- Story -->
             <section id="story">
                 <!-- <div class="image main" data-position="center">
@@ -336,15 +340,15 @@
           </div>
         </section>
         -->
-        </div>
+        </main>
 
         <!-- Footer -->
         <section id="footer">
             <div class="container">
                 <ul class="copyright">
-                    <li>&copy; Karyn Lisker. All rights reserved.</li>
-                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    <li>Webmaster: <a href="http://lisker.me">Paul Lisker</a></li>
+                    <li>&copy; <span data-auto-year>2026</span> Karyn Lisker. All rights reserved.</li>
+                    <li>Design: <a href="https://html5up.net" rel="noopener" target="_blank">HTML5 UP</a></li>
+                    <li>Webmaster: <a href="https://lisker.me" rel="noopener" target="_blank">Paul Lisker</a></li>
                 </ul>
             </div>
         </section>
@@ -358,6 +362,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>document.querySelectorAll('[data-auto-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 </body>
 
 </html>
