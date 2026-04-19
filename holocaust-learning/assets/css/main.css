@@ -2196,6 +2196,7 @@ input, select, textarea {
 				border-radius: 100%;
 				display: block;
 				width: 100%;
+				height: auto;
 			}
 
 		.image.main {
