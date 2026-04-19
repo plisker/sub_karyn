@@ -59,13 +59,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <!-- Wrapper -->
     <div id="wrapper">
         <!-- Main -->
-        <section id="main">
+        <main id="main">
             <header>
                 <span class="avatar">
                     <picture>
                         <source srcset="images/avatar-compressed.webp" type="image/webp">
                         <source srcset="images/avatar-compressed.jpg" type="image/jpeg">
-                        <img src="images/avatar-compressed.jpg">
+                        <img src="images/avatar-compressed.jpg" alt="Karyn Lisker" width="200" height="200">
                     </picture>
                 </span>
                 <h1>Karyn Lisker</h1>
@@ -79,14 +79,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <footer>
                 <ul class="icons">
                     <li class="flex-item"><a href="https://www.linkedin.com/in/karynlisker/" rel="noopener"
-                            class="fa-brands fa-linkedin" target=_blank>LinkedIn</a></li>
+                            class="fa-brands fa-linkedin" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
                     <li class="flex-item"><a href="https://www.youtube.com/channel/UC5BwGJ5Je4LB2BeBQorlSOQ/"
-                            rel="noopener" class="fa-brands fa-youtube" target=_blank>YouTube</a></li>
-                    <li class="flex-item"><a href="mailto:karyn@lisker.me" class="fa-regular fa-envelope" target=_blank>Email</a>
+                            rel="noopener" class="fa-brands fa-youtube" target="_blank" aria-label="YouTube">YouTube</a></li>
+                    <li class="flex-item"><a href="mailto:karyn@lisker.me" class="fa-regular fa-envelope" aria-label="Email">Email</a>
                     </li>
                 </ul>
             </footer>
-        </section>
+        </main>
         <!-- Footer -->
         <footer id="footer">
             <ul class="copyright">
@@ -101,7 +101,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <script>
         if ('addEventListener' in window) {
             window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+            // FontAwesome kit auto-adds aria-hidden to elements carrying fa-* classes.
+            // Our icon links carry their accessible name in aria-label, so strip aria-hidden whenever FA re-adds it.
+            var iconLinks = document.querySelectorAll('.icons a[aria-label]');
+            var strip = function () { iconLinks.forEach(function (el) { if (el.getAttribute('aria-hidden')) el.removeAttribute('aria-hidden'); }); };
+            var observer = new MutationObserver(strip);
+            iconLinks.forEach(function (el) { observer.observe(el, { attributes: true, attributeFilter: ['aria-hidden'] }); });
         }
     </script>
 </body>
