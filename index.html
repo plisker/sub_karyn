@@ -24,10 +24,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/414f558033.js" crossorigin="anonymous"></script>
-    <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
@@ -101,17 +98,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         </footer>
     </div>
     <!-- Scripts -->
-    <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
     <script>
-        if ('addEventListener' in window) {
-            window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-            // FontAwesome kit auto-adds aria-hidden to elements carrying fa-* classes.
-            // Our icon links carry their accessible name in aria-label, so strip aria-hidden whenever FA re-adds it.
-            var iconLinks = document.querySelectorAll('.icons a[aria-label]');
-            var strip = function () { iconLinks.forEach(function (el) { if (el.getAttribute('aria-hidden')) el.removeAttribute('aria-hidden'); }); };
-            var observer = new MutationObserver(strip);
-            iconLinks.forEach(function (el) { observer.observe(el, { attributes: true, attributeFilter: ['aria-hidden'] }); });
-        }
+        window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+        // FontAwesome kit auto-adds aria-hidden to elements carrying fa-* classes.
+        // Our icon links carry their accessible name in aria-label, so strip aria-hidden whenever FA re-adds it.
+        var iconLinks = document.querySelectorAll('.icons a[aria-label]');
+        var observer = new MutationObserver(function () { iconLinks.forEach(function (el) { if (el.getAttribute('aria-hidden')) el.removeAttribute('aria-hidden'); }); });
+        iconLinks.forEach(function (el) { observer.observe(el, { attributes: true, attributeFilter: ['aria-hidden'] }); });
     </script>
 </body>
 
