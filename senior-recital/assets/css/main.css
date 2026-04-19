@@ -9029,29 +9029,23 @@ input, select, textarea {
 			}
 	/* Home button */
 	#home-button {
-		position: absolute; /* Fixed/sticky position */
-		top: 20px; /* Place the button at the bottom of the page */
-		left: 20px; /* Place the button 30px from the right */
-		z-index: 99; /* Make sure it does not overlap */
-		background:none;
-		border:none;
-		outline: none;
-		margin:0;
-		padding:0;
-		cursor: pointer;
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		z-index: 99;
+		display: block;
 		height: 50px;
 		width: 50px;
-		font-size: 50px; /* Increase font size */
-		color: #000; /* Text color */
-		cursor: pointer; /* Add a mouse pointer on hover */
+		line-height: 50px;
+		font-size: 50px;
+		color: #000;
+		text-decoration: none;
 		opacity: 0.2;
-		transition: 0.3s;
+		transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out;
 	}
 
 	#home-button:hover {
-		opacity: 0.5;
-	}
-
-	#home-button:active {
-		background-color: #555;
+		opacity: 0.8;
+		color: #E4A018;
+		text-decoration: none;
 	}
